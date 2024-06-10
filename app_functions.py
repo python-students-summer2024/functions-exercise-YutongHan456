@@ -91,7 +91,14 @@ def is_correct_answer(die_1_value, die_2_value, question_type, given_answer):
     if question_type == "sum":
         answer = die_1_value + die_2_value
         answer = abs(answer)
-        if abs(given_answer) == answer:
+        if given_answer == answer:
+            return True
+        else:
+            return False
+    else:
+        answer = die_1_value - die_2_value
+        answer = abs(answer)
+        if given_answer == answer:
             return True
         else:
             return False
